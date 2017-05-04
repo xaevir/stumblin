@@ -1,11 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require("nodemailer")
+const morgan = require("morgan")
+
 const transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
     user: 'xaevir33@gmail.com', // Your email id
-    pass: 'ironman33' // Your password
+    pass: 'ironman33' // Your papp.use(morgan('combined'))assword
   }
 });
 
@@ -14,6 +16,7 @@ const app = express();
 app.set('port', (process.env.PORT || 3001));
 
 app.use(bodyParser.json());
+app.use(morgan('combined'))
 
 app.get('/', (req, res)=> { res.send('Hello World!') })
 
