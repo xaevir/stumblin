@@ -13,11 +13,10 @@ import Contact from './contact';
 import Footer from './footer';
 
 const Section1 = styled.div`
-  background: url(${bgImgSmall}) no-repeat left center;
-  background-size: cover;
+  background: url(${bgImgSmall}) no-repeat left center/cover;
   padding-bottom: 200px;
   @media (min-width: 768px) {
-    background: url(${bgImgBig}) no-repeat center center;
+    background: url(${bgImgBig}) no-repeat center center/cover;
   }
 `;
 
